@@ -9,6 +9,8 @@ const photosListReducer=(state,action)=>{
         return element;
       })
     }
+    case 'FILTER':
+      return{...state, filterCategory:action.category}
     default:
       return state;
   }

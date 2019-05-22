@@ -6,13 +6,24 @@ const FavouritePhotosList = (props) => {
     return item.liked;
   })
 
-  const listItems = filteredList.map((item) => {
-    return <Photo
-      photo={item}
-      key={item.id}
-      favourite={props.favourite}
-    />
-  });
+  const filteredItems = () => {
+    switch (props.category) {
+      case 'All':
+      return filteredList
+      default:
+      return filteredList.filter((item) => {
+        return props.category === item.category;
+      })
+    }
+  }
+
+    const listItems = filteredItems().map((element) => {
+      return <Photo
+        photo={element}
+        key={element.id}
+        favourite={props.favourite}
+      />
+    });
 
   return (
     <>

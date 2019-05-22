@@ -3,7 +3,8 @@ import PhotosList from '../components/PhotosList';
 
 const mapStateToProps = (state) => {
   return {
-    photos: state.photosData
+    photos: state.photosData,
+    category: state.filterCategory
   };
 };
 

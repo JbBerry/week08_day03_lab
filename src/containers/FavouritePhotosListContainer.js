@@ -3,7 +3,8 @@ import FavouritePhotosList from '../components/FavouritePhotosList';
 
 const mapStateToProps = (state) => {
   return {
-    photos: state.photosData
+    photos: state.photosData,
+    category: state.filterCategory   
   };
 };
 

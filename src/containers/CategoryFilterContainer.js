@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    favourite: (category) => {
+    filter: (category) => {
       dispatch({
         type: 'FILTER',
         category

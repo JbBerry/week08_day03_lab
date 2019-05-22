@@ -3,31 +3,18 @@ import Photo from './Photo';
 
 const PhotosList = (props) => {
 
+const filteredItems = () => {
+  switch (props.category) {
+    case 'All':
+    return props.photos
+    default:
+    return props.photos.filter((item) => {
+      return props.category === item.category;
+    })
+  }
+}
 
-  const populateCategories=()=>{
-      const arrOptions = props.photos.map((element,index)=>{
-          return(
-            element.category
-          )
-        });
-      const uniqueArrOptions = []
-        arrOptions.forEach((option,index)=>{
-          if (arrOptions.indexOf(option) === index){
-            uniqueArrOptions.push(option)
-          }
-        })
-
-      const arrElements = uniqueArrOptions.map((element,index)=>{
-        return(
-          <option key={index}>{element}</option>
-        )
-      })
-      arrElements.unshift(<option defaultValue key={-1}>All</option>)
-      return arrElements;
-    }
-
-
-  const listItems = props.photos.map((element) => {
+  const listItems = filteredItems().map((element) => {
     return <Photo
       photo={element}
       key={element.id}
@@ -37,13 +24,6 @@ const PhotosList = (props) => {
 
   return (
     <>
-    <label> Category</label>
-    <select
-    // value={this.state.selectedAtribute}
-    // onChange={handleAtributeChange}
-    >
-    {populateCategories()}
-    </select>
       {listItems}
     </>
   );

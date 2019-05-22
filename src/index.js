@@ -10,7 +10,7 @@ import photosData from './data/photos_data'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-const store = createStore(photosListReducer, {photosData:photosData, filterCategory:''}, composeEnhancers());
+const store = createStore(photosListReducer, {photosData:photosData, filterCategory:'All'}, composeEnhancers());
 console.log(photosData);
 
 
