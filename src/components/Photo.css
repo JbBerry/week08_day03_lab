@@ -1,0 +1,28 @@
+.photo-tile{
+  border: 1px solid grey;
+  width: 320px;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 310px;
+  grid-template-rows: 190px 55px;
+  grid-template-areas:
+    "photo"
+    "footer";
+  margin: 10px;
+}
+.photo{
+  grid-area: "photo";
+  display: block;
+  margin: 10px;
+}
+button{
+  grid-area: "footer";
+  text-align: right;
+  border: 0;
+  outline:none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 20px;
+
+}

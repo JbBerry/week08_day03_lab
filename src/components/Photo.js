@@ -1,4 +1,5 @@
 import React from 'react';
+import './Photo.css';
 
 const Photo = (props) => {
 
@@ -7,8 +8,8 @@ const Photo = (props) => {
   }
 
   return (
-    <div>
-      <img src={props.photo.url} className="photo"/>
+    <div className = 'photo-tile'>
+      <img src={props.photo.url} alt={props.photo.url} className='photo'/>
       <button onClick={handleClick}>👍</button>
     </div>
   );

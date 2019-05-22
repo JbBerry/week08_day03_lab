@@ -1,5 +1,6 @@
 import React from 'react';
 import Photo from './Photo';
+import './PhotoList.css'
 
 const PhotosList = (props) => {
 
@@ -23,9 +24,9 @@ const filteredItems = () => {
   });
 
   return (
-    <>
+    <div className='photo-container'>
       {listItems}
-    </>
+    </div>
   );
 }
 

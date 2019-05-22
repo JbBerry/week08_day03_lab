@@ -32,7 +32,7 @@ const photosData = [
   }, {
     id: 7,
     url: 'images/landscape_3.jpg',
-    category: 'Landsape',
+    category: 'Landscape',
     liked: false
   }, {
     id: 8,

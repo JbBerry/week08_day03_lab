@@ -1,5 +1,6 @@
 import React from 'react';
 import Photo from './Photo';
+import './PhotoList.css'
 
 const FavouritePhotosList = (props) => {
   const filteredList = props.photos.filter((item)=>{
@@ -26,9 +27,9 @@ const FavouritePhotosList = (props) => {
     });
 
   return (
-    <>
+    <div className='photo-container'>
       {listItems}
-    </>
+    </div>
   );
 }
 
